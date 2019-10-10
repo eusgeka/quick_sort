@@ -1,0 +1,31 @@
+version: 2
+jobs:
+  build:
+    branches:
+      only:
+        - master
+        - /development/
+
+    working_directory: ~/quick_sort
+
+    docker:
+      - image: circleci/openjdk:11.0-stretch
+
+    steps:
+
+      - checkout
+
+      - restore_cache:
+          key: quick_sort-{{ checksum "pom.xml" }}
+
+      - run: mvn dependency:go-offline
+
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: quick_sort-{{ checksum "pom.xml" }}
+
+      - run: mvn clean test
+
+      - store_test_results:
+          path: target/surefire-reports
