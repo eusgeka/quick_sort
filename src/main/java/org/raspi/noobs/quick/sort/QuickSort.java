@@ -29,15 +29,15 @@ public class QuickSort {
      */
     public void quickSort(int arr[], int begin, int end, boolean useMiddleElementAsPivot) {
         if (useMiddleElementAsPivot) {
-            LOGGER.info("QuickSort and use middle element as pivot {}", useMiddleElementAsPivot);
-            LOGGER.info("Original array of integers {}", arr);
+            LOGGER.debug("QuickSort and use middle element as pivot {}", useMiddleElementAsPivot);
+            LOGGER.debug("Original array of integers {}", arr);
             quickSortMiddleElementAsPivot(arr, begin, end);
-            LOGGER.info("After sorting id done array of integers {}", arr);
+            LOGGER.debug("After sorting id done array of integers {}", arr);
         } else {
-            LOGGER.info("QuickSort and use middle element as pivot {}", useMiddleElementAsPivot);
-            LOGGER.info("Original array of integers {}", arr);
+            LOGGER.debug("QuickSort and use middle element as pivot {}", useMiddleElementAsPivot);
+            LOGGER.debug("Original array of integers {}", arr);
             quickSortLastElementAsPivot(arr, begin, end);
-            LOGGER.info("After sorting id done array of integers {}", arr);
+            LOGGER.debug("After sorting id done array of integers {}", arr);
         }
     }
 
