@@ -14,7 +14,7 @@
         <log4j-api.version>2.12.1</log4j-api.version>
         <log4j-core.version>2.12.1</log4j-core.version>
         <log4j-slf4j-impl.verssion>2.12.1</log4j-slf4j-impl.verssion>
-        <junit.version>4.12</junit.version>
+        <junit-jupiter-api.version>5.5.2</junit-jupiter-api.version>
 
     </properties>
 
@@ -42,9 +42,9 @@
         </dependency>
 
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit-jupiter-api.version}</version>
             <scope>test</scope>
         </dependency>
 
