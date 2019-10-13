@@ -5,10 +5,12 @@
  */
 package org.raspi.noobs.quick.sort;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.AfterEach;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
@@ -16,16 +18,23 @@ import static org.junit.Assert.*;
  */
 public class QuickSortTest {
 
-    @Before
+    private final Logger LOGGER = LoggerFactory.getLogger(QuickSortTest.class);
+
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
     @Test
     public void testQuickSortUseMidleElementAsPivot() {
+        LOGGER.info(" ");
+        LOGGER.info(" ");
+        LOGGER.info(" ");
+        LOGGER.info("<--------- Start ---------------->");
+        LOGGER.info("Test Quick Sort and Use Midle Element As Pivot");
         QuickSort quickSort = new QuickSort();
         int arr[] = {9, 4, 6, 5, 3, 2, 1, 8, 7};
         boolean useMiddleElementAsPivot = true;
@@ -33,10 +42,18 @@ public class QuickSortTest {
         for (int i = 0; i < arr.length - 2; i++) {
             assertTrue(arr[i] <= arr[i + 1]);
         }
+        LOGGER.info("<--------- End ---------------->");
+        LOGGER.info(" ");
+        LOGGER.info(" ");
     }
 
     @Test
     public void testQuickSortUseLastElementAsPivot() {
+        LOGGER.info(" ");
+        LOGGER.info(" ");
+        LOGGER.info(" ");
+        LOGGER.info("<--------- Start ---------------->");
+        LOGGER.info("Test Quick Sort Use Last Element As Pivot");
         QuickSort quickSort = new QuickSort();
         int arr[] = {9, 4, 6, 5, 3, 2, 1, 8, 7};
         boolean useMiddleElementAsPivot = false;
@@ -44,5 +61,8 @@ public class QuickSortTest {
         for (int i = 0; i < arr.length - 2; i++) {
             assertTrue(arr[i] <= arr[i + 1]);
         }
+        LOGGER.info("<--------- End ---------------->");
+        LOGGER.info(" ");
+        LOGGER.info(" ");
     }
 }
