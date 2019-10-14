@@ -45,10 +45,11 @@ public class QuickSortTest {
         LOGGER.info(" ");
         LOGGER.info("<--------- Start ---------------->");
         LOGGER.info("Test Quick Sort and Use Midle Element As Pivot");
-        QuickSort quickSort = new QuickSort();
+        QuickSort quickSort = new QuickSortMiddleElementAsPivotImpl();
         int arr[] = {9, 4, 6, 5, 3, 2, 1, 8, 7};
-        boolean useMiddleElementAsPivot = true;
-        quickSort.quickSort(arr, 0, arr.length - 1, useMiddleElementAsPivot);
+        LOGGER.debug("Before Quick Sort {}", arr);
+        quickSort.quickSort(arr, 0, arr.length - 1);
+        LOGGER.debug("After Quick Sort {}", arr);
         for (int i = 0; i < arr.length - 2; i++) {
             assertTrue(arr[i] <= arr[i + 1]);
         }
@@ -64,13 +65,14 @@ public class QuickSortTest {
         LOGGER.info(" ");
         LOGGER.info("<--------- Start ---------------->");
         LOGGER.info("Test Quick Sort Use Last Element As Pivot");
-        QuickSort quickSort = new QuickSort();
+        QuickSort quickSort = new QuickSortMiddleElementAsPivotImpl();
         int arr[] = {9, 4, 6, 5, 3, 2, 1, 8, 7};
-        boolean useMiddleElementAsPivot = false;
-        quickSort.quickSort(arr, 0, arr.length - 1, useMiddleElementAsPivot);
+        LOGGER.debug("Before Quick Sort {}", arr);
+        quickSort.quickSort(arr, 0, arr.length - 1);
         for (int i = 0; i < arr.length - 2; i++) {
             assertTrue(arr[i] <= arr[i + 1]);
         }
+        LOGGER.debug("After Quick Sort {}", arr);
         LOGGER.info("<--------- End ---------------->");
         LOGGER.info(" ");
         LOGGER.info(" ");
