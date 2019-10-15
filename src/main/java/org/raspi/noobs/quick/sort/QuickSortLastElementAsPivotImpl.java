@@ -37,6 +37,7 @@ public class QuickSortLastElementAsPivotImpl implements QuickSort {
      * @param begin
      * @param end
      */
+    @Override
     public void quickSort(int arr[], int begin, int end) {
         if (begin < end) {
             int partitionIndex = partition(arr, begin, end);

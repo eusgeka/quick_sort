@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright 2019 Epsilon AgentX <epsilonagentx at gmail.com>.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,6 +37,7 @@ public class QuickSortMiddleElementAsPivotImpl implements QuickSort {
      * @param low
      * @param high
      */
+    @Override
     public void quickSort(int[] arr, int low, int high) {
         if (arr == null || arr.length == 0) {
             return;
