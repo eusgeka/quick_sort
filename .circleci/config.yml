@@ -5,6 +5,7 @@ jobs:
       only:
         - master
         - /development/
+        - /dependabot/
 
     working_directory: ~/quick_sort
 
